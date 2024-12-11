@@ -1,50 +1,112 @@
-# React + TypeScript + Vite
+# CartCraze
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CartCraze is a modern, responsive e-commerce website built with React and TypeScript. It utilizes the Fake Store API to simulate a real-world shopping experience.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Key Components](#key-components)
+- [Pages](#Pages)
+- [State Management](#state-management)
+- [Deployment](#deployment)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Responsive design for mobile, tablet, and desktop views
+- Dynamic product catalog with categories
+- Product search functionality
+- Shopping cart with add, remove, and update quantity features
+- Persistent cart state using local storage
+- Product detail pages
+- Category-based product filtering
+- User-friendly navigation with breadcrumbs
+- Loading states and error handling
+- Checkout process (simulated)
+- WhatsApp contact button for customer support
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+- **React**: JavaScript library for building user interfaces
+- **React Router**: Declarative routing for React applications
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **Lucide React**: Icon library for React
+- **React Hot Toast**: Notifications for React applications
+- **Embla Carousel**: Carousel library for React
+- **Radix UI**: Accessible UI components for React
+- **Vite**: Next-generation frontend tooling
+- **TypeScript**: Strongly typed programming language
+- **npm**: Package manager for JavaScript
+- **shadcn/ui**: UI component library for React
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Getting Started
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+### Prerequisites
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
-```
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. **Clone the Repository**  
+   Clone the project repository to your local machine:
+
+   ```bash
+   git clone https://github.com/07SUJITH/CartCraze.git
+   ```
+
+2. **Navigate to the Project Directory**  
+   Move into the cloned directory:
+
+   ```bash
+   cd CartCraze
+   ```
+
+3. **Install Dependencies**  
+   Install the required dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the Development Server**  
+   Start the development server to view the project in your browser:
+
+   ```bash
+   npm run dev
+   ```
+
+### Key Components
+
+- `AddToCartButton.tsx`: Reusable button component for adding products to the cart
+- `Carousel.tsx`: Image slider for featured products on the homepage
+- `CartSidebar.tsx`: Sliding cart component for easy access to cart items
+- `Footer.tsx`: Footer component with links and copyright information
+- `Header.tsx`: Main navigation component with search functionality and cart summary
+- `MobileBottomNav.tsx`: Bottom navigation bar for mobile devices
+- `MobileNav.tsx`: Collapsible navigation menu for mobile devices
+- `ProductCard.tsx`: Reusable component for displaying product information in grids
+- `SearchBar.tsx`: Search input component with autocomplete functionality
+- `WhatsAppButton.tsx`: Floating WhatsApp button for customer support
+
+### Pages
+
+- `app/page.tsx`: Homepage with featured products and categories
+- `app/cart/page.tsx`: Shopping cart page with item management
+- `app/category/page.tsx`: Dynamic category page displaying products by category
+- `app/checkout/page.tsx`: Checkout process page (simulated)
+- `app/product/[id]/page.tsx`: Individual product detail page
+
+## state-management
+
+### Context
+
+- `CartContext.tsx`: Provides global state management for the shopping cart
+
+## Deployment
+
+- This project is deployed using Netlify
+  Site is live at: https://cartcraze1.netlify.app/
